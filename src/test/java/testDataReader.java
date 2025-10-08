@@ -1,5 +1,3 @@
-package org.example;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,7 +8,7 @@ public class testDataReader {
 
 
     public testDataReader(String id) {
-        String filePath = "C:/privat/capstone/src/main/java/capstoneTestData.txt";
+        String filePath = "src/test/java/capstoneTestData.txt";
         try {
             loadDataById(filePath, id);
         } catch (IOException e) {
