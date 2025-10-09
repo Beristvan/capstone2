@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import Utils.CustomWebElement;
 
 import java.time.Duration;
 
@@ -21,6 +22,7 @@ public class MainPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         By opportunityButtonLocator = By.xpath("//one-app-nav-bar-item-root[@data-id='Opportunity']//a[@title='Opportunities']");
         WebElement opportunityButton = wait.until(ExpectedConditions.visibilityOfElementLocated(opportunityButtonLocator));
-        opportunityButton.click();
+        CustomWebElement opportunityJavascriptButton = new CustomWebElement(opportunityButton,driver);
+        opportunityJavascriptButton.javaClick();
     }
 }
